@@ -1,0 +1,39 @@
+body{
+ background-color: #f6f5f0;
+background-image: url("https://transparenttextures.com/patterns/subtle-carbon.png");
+color:#f8f8ff
+
+}
+h1, h2, h3 , p {
+  color: #4b4033;
+}
+.container {
+
+  display: flex;
+
+  justify-content: center;
+
+  
+  
+}
+
+
+.btn {
+
+  display: flex;
+
+ justify-content: space-evenly;
+
+}
+.btn-show {
+
+  background:#f6f5f0;
+
+  border: none;
+
+  font-size: 18px;
+
+  color:#7B8B6F
+
+}
+
