@@ -8,8 +8,8 @@ function Services() {
 
   const filtered = data.filter((s) => {
     if (filter === "all") return true;
-    if (filter === "mini") return s.price < 50;
-    if (filter === "premium") return s.price >= 50;
+    if (filter === "mini") return s.price <= 20;
+    if (filter === "premium") return s.price > 20;
     return true;
   });
 
@@ -19,7 +19,7 @@ function Services() {
 
       <div className="filter-buttons">
         <button className={`filter-btn ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>Все</button>
-        <button className={`filter-btn ${filter === "mini" ? "active" : ""}`} onClick={() => setFilter("mini")}>До 50 $ </button>
+        <button className={`filter-btn ${filter === "mini" ? "active" : ""}`} onClick={() => setFilter("mini")}>До 20 $</button>
         <button className={`filter-btn ${filter === "premium" ? "active" : ""}`} onClick={() => setFilter("premium")}>Премиум</button>
       </div>
 
@@ -32,15 +32,22 @@ function Services() {
         ))}
       </div>
 
-      
       {selected && (
         <div className="modal-overlay" onClick={() => setSelected(null)}>
           <div className="modal-card" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelected(null)}>✕</button>
             <h2 className="modal-title">{selected.service}</h2>
-            
             <p className="modal-desc">{selected.description}</p>
-            <span className="modal-price">{selected.price.toLocaleString()} ₽</span>
+            <span className="modal-price">{selected.price.toLocaleString()} $</span>
+            <br />
+            <a 
+              href="https://t.me/code_bazi_qimen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-btn"
+            >
+              Записаться в Telegram →
+            </a>
           </div>
         </div>
       )}

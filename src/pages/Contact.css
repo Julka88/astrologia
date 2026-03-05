@@ -1,12 +1,12 @@
 .contact-page {
   min-height: 100vh;
-  background:
-   url("https://transparenttextures.com/patterns/cartographer.png"),
-    radial-gradient(
+ background: 
+  url("https://transparenttextures.com/patterns/cartographer.png"),
+  radial-gradient(
     ellipse at top,
-    #1a3d2e 0%,
+    #095714e2 0%,
     #0d2618 50%,
-    #081f17 100%
+    #05140f 100%
   );
   position: relative;
   overflow: hidden;

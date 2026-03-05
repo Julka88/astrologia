@@ -75,6 +75,25 @@
   font-weight: 500;
 }
 
+.modal-btn {
+  display: inline-block;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #05140f;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+}
+
 @media (max-width: 600px) {
   .services-grid {
     grid-template-columns: 1fr;
