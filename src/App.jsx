@@ -1,75 +1,38 @@
-import { data } from './data'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from "./pages/Home";
+import Forecast from "./pages/Forecast";
+import FengShui from "./pages/FengShui";
+import Service from "./pages/Services";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Footer from "./components/Footer";
 import './App.css'
-import { useState } from 'react'
+
 
 function App() {
-  const [feels, setFeels] = useState(0)
   
- const { id, image, nameFeeling,title,service,price, description} = data [feels];
-
- const previosFeels = () => {
-     setFeels((feels => {
-       feels --;
-        if( feels < 0 ){
-         return data.length -1 
-       }
-       return feels;
-     }))
- 
-   }
-   const nextFeels = () => {
-     setFeels((feels => {
-       feels ++ ;
-       if( feels >data.length -1 ){
-         feels = 0
-       }
-       return feels;
-     }))
- 
-   }
-   const [showMore, setShowMore]= useState (false);
-
-
-   const setShowComponent = () =>{
-       
-   }
 
   return (
-    <>
-      <div>
-        <div className='container'>
-      <h1> Природный свет { feels.length} </h1>
-       </div>
-            <div className='container'>
-                <h2>{id}- {nameFeeling}</h2>
-            </div>
-         <div className='container'>
-          <h2>{title}</h2>
-         </div>
-          <div className='container'>
-              <img src={` /${image}`} alt="feeling" width='450px' />
-         </div>
-        
-        <div className='container'>
-          <h2>{service}</h2>
-        </div>
-         
-          <div className='container'>
-          <p> {showMore ? description : description.substring(0, 88) + '....'}
-            <button className='btn-show' onClick={()=> setShowMore(!showMore)}> {showMore ? 'Скрыть ' : ' Показать подробнее '} </button> </p>
-                  </div>
-         <div className='container'>
-          <button onClick={()=> setShowComponent(true) }> Стоимость </button>
-        </div>
-        <div className='container btn'>
-          <button onClick={previosFeels}> Назад</button>
-           <button onClick={nextFeels}>Вперед</button>
-        </div> 
      
-    </div>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path="/about" element={<About />} />
+      <Route path ="/" element = {<Home/>} />
+      <Route path ="/forecast" element = {<Forecast/>} />
+      <Route path ="/fengshui" element = {<FengShui/>} />
+      <Route path ="/service" element = {<Service/>} />
+      <Route path ="/contact" element = {<Contact/>} />
+     </Routes>
+     <Footer />
+    </BrowserRouter>
+     
+     
+   
   
      
-    </>
+    
   )
 }
 

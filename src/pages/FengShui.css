@@ -1,0 +1,211 @@
+.fengshui-page {
+  min-height: 100vh;
+  background: 
+   url("https://transparenttextures.com/patterns/cartographer.png"),
+   radial-gradient(
+    ellipse at top,
+    #1a3d2e 0%,
+    #0d2618 50%,
+    #05140f 100%
+  );
+  display: flex;
+  justify-content: center;
+  padding: 120px 20px 60px;
+}
+
+.fengshui-content {
+  max-width: 1289px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.fengshui-title {
+  font-size: 42px;
+  font-weight: 300;
+  background: linear-gradient(
+    90deg,
+    #b45309 0%, #d97706 15%, #f59e0b 30%,
+    #fcd34d 40%, #fffbeb 50%, #fcd34d 60%,
+    #f59e0b 70%, #d97706 85%, #b45309 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  margin-bottom: 8px;
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.fs-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(251,191,36,0.2);
+  border-radius: 16px;
+}
+
+.fs-hero-sub {
+  color: #5eead4;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.fs-hero-text {
+  color: #a7f3d0;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.9;
+  max-width: 680px;
+}
+
+.fs-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fs-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(94,234,212,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fs-item.open {
+  border-color: rgba(251,191,36,0.4);
+  background: rgba(251,191,36,0.04);
+}
+
+.fs-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  cursor: pointer;
+  color: #fbbf24;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.fs-item-header:hover {
+  background: rgba(251,191,36,0.06);
+}
+
+.fs-arrow {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.fs-item-body {
+  padding: 0 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.fs-item-body p {
+  color: #a7f3d0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.fs-steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #a7f3d0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.fs-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fs-list li {
+  color: #a7f3d0;
+  font-size: 15px;
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.fs-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #fbbf24;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.fengshui-cta {
+  background: rgba(251,191,36,0.05);
+  border: 1px solid rgba(251,191,36,0.3);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.fengshui-cta h2 {
+  color: #fbbf24;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.fengshui-cta p {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #05140f;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251,191,36,0.3);
+  margin-top: 8px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(251,191,36,0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
