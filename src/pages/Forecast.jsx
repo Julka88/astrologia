@@ -52,7 +52,7 @@ function Forecast() {
         </button>
         {showMore && (
           <button className="btn-navigate" onClick={() => navigate("/service")}>
-            Записаться — {price.toLocaleString()} ₽ →
+            Записаться — {price.toLocaleString()} $ →
           </button>
         )}
       </div>
