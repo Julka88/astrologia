@@ -12,6 +12,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "legacy": "^0.0.3",
+    "node-telegram-bot-api": "^0.67.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-helmet": "^6.1.0",
